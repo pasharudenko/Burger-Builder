@@ -1,15 +1,27 @@
 import React from 'react';
 
 const Input = (props) => {
-    let inputType, restProps, element;
-    ({inputType, ...restProps} = props);
+    let element, elementType, restProps;
+    ({elementType, ...restProps} = props);
 
-    switch (inputType) {
+    switch (elementType) {
         case 'input':
             element = <input {...restProps} />;
             break;
         case 'textarea':
             element = <textarea {...restProps} />;
+            break;
+        case 'select':
+            element =
+                <select className={restProps.className} name={restProps.name}>
+                    {
+                        restProps.options.map(curr => {
+                            return (
+                                <option key={curr.value} value={curr.value}>{curr.displayValue}</option>
+                            );
+                        })
+                    }
+                </select>;
             break;
         default:
             element = <input {...restProps} />;
@@ -18,7 +30,7 @@ const Input = (props) => {
 
     return (
         <div>
-            <label>{props.label}</label>
+            {/*<label>{props.label}</label>*/}
             {element}
         </div>
     );

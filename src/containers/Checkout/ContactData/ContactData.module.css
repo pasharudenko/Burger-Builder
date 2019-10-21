@@ -20,6 +20,7 @@
     border: 1px solid #cdcdcd;
     width: 85%;
     margin: 5px auto;
+    box-sizing: content-box;
 }
 
 @media (min-width: 600px) {

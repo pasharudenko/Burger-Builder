@@ -100,13 +100,42 @@ class ContactData extends Component{
 
 
     render() {
+        const formArr = [];
+        for (let key in this.state.orderForm) {
+            formArr.push({
+                id: key,
+                config: this.state.orderForm[key]
+            })
+        }
 
         let form = (
             <form className={classes.Form}>
-                <Input inputType='input' name="name" placeholder="Your name" className={classes.Input}/>
-                <Input inputType='email' name="email" placeholder="Your email" className={classes.Input}/>
-                <Input inputType='input' name="street" placeholder="Your Street" className={classes.Input}/>
-                <Input inputType='input' name="postal" placeholder="Your Postal" className={classes.Input}/>
+                {
+                    formArr.map(curr => {
+                        let params;
+                        if (curr.config.elementType === 'select') {
+                            params = {
+                                key: curr.id,
+                                name: curr.id,
+                                elementType: curr.config.elementType,
+                                className: classes.Input,
+                                options: curr.config.elementConfig.options
+                            };
+                        } else {
+                             params = {
+                                key: curr.id,
+                                name: curr.id,
+                                elementType: curr.config.elementType,
+                                className: classes.Input,
+                                type: curr.config.elementConfig.type,
+                                placeholder: curr.config.elementConfig.placeholder
+                            };
+                        }
+                        return (
+                           <Input { ...params }/>
+                       );
+                    })
+                }
                 <Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
             </form>
         );
