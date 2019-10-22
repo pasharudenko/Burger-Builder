@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Input = (props) => {
-    let element, elementType, restProps;
-    ({elementType, ...restProps} = props);
+    let element, elementType, valid, restProps;
+    ({elementType, valid, ...restProps} = props);
 
     switch (elementType) {
         case 'input':
