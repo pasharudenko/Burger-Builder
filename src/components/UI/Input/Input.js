@@ -13,7 +13,7 @@ const Input = (props) => {
             break;
         case 'select':
             element =
-                <select className={restProps.className} name={restProps.name}>
+                <select className={restProps.className} name={restProps.name} onChange={restProps.onChange}>
                     {
                         restProps.options.map(curr => {
                             return (
