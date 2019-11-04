@@ -23,6 +23,10 @@
     box-sizing: content-box;
 }
 
+.Error {
+    border: 1px solid red;
+}
+
 @media (min-width: 600px) {
     .ContactData {
         width: 500px;
