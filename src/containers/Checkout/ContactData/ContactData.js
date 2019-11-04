@@ -95,19 +95,12 @@ class ContactData extends Component{
                       { value: 'cheapest', displayValue: 'Cheapest' }
                   ]
               },
-<<<<<<< HEAD
-              value: 'fastest'
-          }
-        },
-=======
-              value: '',
+              value: 'fastest',
               valid: true,
               touched: false
           }
         },
-        loading: false,
         formStatus: false
->>>>>>> 892f39329c3f92930d55797728ea92e96e9557ed
     };
 
     orderHandler = (event) => {
