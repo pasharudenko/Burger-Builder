@@ -1,0 +1,40 @@
+.Auth {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+    .Auth {
+        width: 500px;
+    }
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Input {
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #cdcdcd;
+    width: 85%;
+    margin: 5px auto;
+    box-sizing: content-box;
+}
+
+.Error {
+    border: 1px solid red;
+}
+
+@media (min-width: 600px) {
+    .ContactData {
+        width: 500px;
+    }
+}
