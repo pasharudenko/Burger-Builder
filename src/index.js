@@ -30,5 +30,7 @@ const app = (
     </Provider>
 );
 
-ReactDOM.render(app, document.getElementById('root'));
+ReactDOM.render(app, document.getElementById('root') || document.createElement('div')); // for testing purpose
 registerServiceWorker();
+
+export default app;

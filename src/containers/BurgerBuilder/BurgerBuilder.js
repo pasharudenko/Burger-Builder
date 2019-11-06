@@ -13,7 +13,7 @@ import * as burgerBuilderActions from '../../store/actions/index';
 
 
 
-class BurgerBuilder extends Component {
+export class BurgerBuilder extends Component {
 
     state = {
         purchasing: false,
@@ -36,6 +36,7 @@ class BurgerBuilder extends Component {
     };
 
     purchaseHandler = () => {
+        
         if(this.props.isAuthenticated) {
             this.setState({purchasing: true});
         } else {

@@ -8,7 +8,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import classes from './Auth.module.css';
 import * as actions from '../../store/actions/index';
 
-class Auth extends Component {
+export class Auth extends Component {
   state = {
     controls: {
       email: {
